@@ -85,12 +85,9 @@
                 {% endif %}
                 <section>
                     <div class="menu">
-                        
-                        <a href="" class="not-dotted"><div class="submenu-card">1</div></a>
-                        <a href="" class="not-dotted"><div class="submenu-card">2</div></a>
-                        <a href="" class="not-dotted"><div class="submenu-card">3</div></a>
-                        <a href="" class="not-dotted"><div class="submenu-card">4</div></a>
-                        <a href="" class="not-dotted"><div class="submenu-card">5</div></a>
+                        {% for num in pages %}
+                        <a href="{% url 'news' num %}" class="not-dotted"><div class="submenu-card{% if num == page_id %} bold big-border{% endif %}">{{ num }}</div></a>
+                        {% endfor %}
                     </div>
                 </section>
         </article>

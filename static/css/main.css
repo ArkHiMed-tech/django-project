@@ -3554,7 +3554,7 @@ video {
 .image-my {
     max-height: 512px;
     min-height: 512px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 section:has(> div.menu) {
@@ -3568,7 +3568,7 @@ section > div.menu {
     display: flex;
     width: 30%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 section > div.menu div {
@@ -3578,8 +3578,13 @@ section > div.menu div {
     border-radius: 8px;
     justify-content: center;
     align-items: center;
+    margin-left: 25px;
 }
 
 section > div.menu a {
     text-decoration: none;
+}
+
+section > div.menu .big-border {
+    border: 2px dashed gray;
 }

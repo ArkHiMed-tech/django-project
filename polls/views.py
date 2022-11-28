@@ -24,9 +24,9 @@ def news(request, page_id):
         lst = [page_id]
     if pages.page(page_id).has_next():
         lst.append(page_id + 1)
-    if pages.page(page_id + 1).has_next():
-        lst.append(page_id + 2)
-    context = {'news_list': pages.page(page_id).object_list, 'pages': lst}
+        if pages.page(page_id + 1).has_next():
+            lst.append(page_id + 2)
+    context = {'news_list': pages.page(page_id).object_list, 'pages': lst, 'page_id': page_id}
     return HttpResponse(template.render(context, request))
 
 def news_redirect(request:HttpRequest): 
