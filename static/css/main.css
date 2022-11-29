@@ -3588,3 +3588,15 @@ section > div.menu a {
 section > div.menu .big-border {
     border: 2px dashed gray;
 }
+
+.future {
+    background-color: #ccccff !important;
+}
+
+.now {
+    background-color: #ccffcc !important;
+}
+
+.past {
+    background-color: #ffeeee !important;
+}
