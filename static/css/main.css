@@ -3600,3 +3600,19 @@ section > div.menu .big-border {
 .past {
     background-color: #ffeeee !important;
 }
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+figure h3 {
+    text-align: center;
+}

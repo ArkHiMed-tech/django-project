@@ -51,3 +51,8 @@ def events(request, page_id):
             lst.append(page_id + 2)
     context = {'events_list': pages.page(page_id).object_list, 'pages': lst, 'page_id': page_id}
     return HttpResponse(template.render(context, request))
+
+def partners(request):
+    template = loader.get_template('partners.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
